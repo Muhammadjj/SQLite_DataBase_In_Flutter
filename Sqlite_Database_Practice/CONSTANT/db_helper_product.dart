@@ -12,7 +12,7 @@ class DataBaseHelperClass {
   static Future<Database> get databases async {
     ///* (getDatabasesPath) as laya use hota ha q ka as app ma jo bhi data
     ///* (CRUD) operation sa get ho ga wo data app ma store krwany ka laya
-    ///*  (getDatabasesPath) asy use krty ha .
+    ///*(getDatabasesPath) asy use krty ha ya ak trha sa dataBase ki location ha.
     String directoryPath = await getDatabasesPath();
 
     ///* ab hm na apny (CRUD) operation sa aya howa data ko js jaga save

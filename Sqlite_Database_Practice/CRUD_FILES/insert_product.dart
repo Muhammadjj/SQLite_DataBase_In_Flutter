@@ -49,6 +49,12 @@ class _InsertDataBaseState extends State<InsertDataBase> {
     ));
     ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Data Inserted Successfully")));
+        
+    productIdController.clear();
+    productImageController.clear();
+    productPriceController.clear();
+    productNameController.clear();
+    
     // try {
        
     // } catch (e) {
@@ -80,6 +86,8 @@ class _InsertDataBaseState extends State<InsertDataBase> {
           padding: const EdgeInsets.all(12.0),
           scrollDirection: Axis.vertical,
           children: [
+           const Center(child: Text("Insert Data",
+           style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),)),
             const SizedBox(
               height: 20,
             ),
@@ -138,7 +146,7 @@ class _InsertDataBaseState extends State<InsertDataBase> {
       validator: validator,
       controller: controller,
       decoration: InputDecoration(
-          border: OutlineInputBorder(), hintText: hintText, label: Text(label)),
+          border:const OutlineInputBorder(), hintText: hintText, label: Text(label)),
     );
   }
 }
